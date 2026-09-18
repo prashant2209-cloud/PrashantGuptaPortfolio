@@ -1,102 +1,428 @@
-<div class="min-h-screen flex flex-col items-center justify-start pt-8 sm:pt-12 md:pt-16 text-white">
-  <div class="max-w-5xl mx-auto w-full px-4 sm:px-6">
+<div class="relative min-h-screen flex flex-col items-center justify-start pt-8 sm:pt-12 md:pt-16 pb-20 text-white overflow-hidden">
+  <!-- Ambient Neon Background Mesh Orbs -->
+  <div class="pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 w-[650px] h-[650px] bg-gradient-to-br from-green-500/15 via-emerald-500/10 to-teal-500/0 rounded-full blur-3xl opacity-70"></div>
+  <div class="pointer-events-none absolute top-1/3 -left-48 w-[450px] h-[450px] bg-cyan-500/10 rounded-full blur-3xl opacity-50"></div>
+  <div class="pointer-events-none absolute top-2/3 -right-48 w-[500px] h-[500px] bg-emerald-500/10 rounded-full blur-3xl opacity-40"></div>
+
+  <div class="relative z-10 max-w-5xl mx-auto w-full px-4 sm:px-6 lg:px-8">
     <!-- Header Section -->
     <div class="text-center mb-12 sm:mb-16">
-      <div class="inline-block mb-4">
-        <span class="text-green-400 text-sm font-semibold uppercase tracking-widest">Professional Profile</span>
+      <!-- Status Badge -->
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-mono font-semibold bg-green-400/10 border border-green-400/30 text-green-400 backdrop-blur-md shadow-lg shadow-green-400/10 mb-5">
+        <span class="relative flex h-2 w-2">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-green-400"></span>
+        </span>
+        <span>Available for Software Engineering & QA/SDET Roles</span>
       </div>
+
       <h1
-        class="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-300">
-        Resume
+        class="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight mb-6 text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-emerald-300 to-teal-200 drop-shadow-sm">
+        Resume & Credentials
       </h1>
-      <p class="text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed max-w-2xl mx-auto">
-        Explore my professional background, skills, and projects that showcase my expertise in full-stack development.
+
+      <p class="text-base sm:text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto mb-8">
+        Computer Science undergraduate specializing in <span class="text-green-400 font-medium">Software QA, Automation & API Testing</span>, <span class="text-teal-300 font-medium">Machine Learning</span>, and Full-Stack Engineering.
       </p>
+
+      <!-- Quick Social & Contact Bar -->
+      <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-4 mb-8 text-xs sm:text-sm font-mono text-slate-300">
+        <a href="https://github.com/prashant2209-cloud" target="_blank" rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg border border-slate-700/60 bg-slate-900/50 backdrop-blur-md hover:border-green-400/60 hover:text-green-400 transition-all">
+          <svg class="w-4 h-4 fill-currentColor" viewBox="0 0 24 24">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+          </svg>
+          <span>GitHub</span>
+        </a>
+
+        <a href="https://www.linkedin.com/in/prashant-gupta-0839302b1/" target="_blank" rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg border border-slate-700/60 bg-slate-900/50 backdrop-blur-md hover:border-green-400/60 hover:text-green-400 transition-all">
+          <svg class="w-4 h-4 fill-currentColor" viewBox="0 0 24 24">
+            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+          </svg>
+          <span>LinkedIn</span>
+        </a>
+
+        <a href="mailto:prashpaa@gmail.com"
+          class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg border border-slate-700/60 bg-slate-900/50 backdrop-blur-md hover:border-green-400/60 hover:text-green-400 transition-all">
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+          <span>prashpaa&#64;gmail.com</span>
+        </a>
+
+        <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg border border-slate-800 bg-slate-900/30 text-slate-400">
+          <svg class="w-4 h-4 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>
+          <span>Greater Noida, UP</span>
+        </span>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-wrap gap-4 justify-center items-center">
+        <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" (click)="trackResumeDownload()"
+          class="group px-8 py-3.5 bg-gradient-to-r from-green-400 to-emerald-500 text-black font-bold rounded-xl shadow-lg shadow-green-400/25 hover:shadow-green-400/40 hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center gap-2 text-sm sm:text-base">
+          <svg class="w-5 h-5 group-hover:translate-y-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+              d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+            </path>
+          </svg>
+          <span>Download Resume (PDF)</span>
+        </a>
+
+        <a routerLink="/projects"
+          class="px-7 py-3.5 border border-green-400/50 bg-green-400/5 text-green-400 font-bold rounded-xl hover:bg-green-400/15 hover:border-green-400 hover:shadow-lg hover:shadow-green-400/20 backdrop-blur-md transition-all duration-300 transform hover:scale-105 text-sm sm:text-base flex items-center justify-center gap-2">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+          </svg>
+          <span>Explore Projects</span>
+        </a>
+
+        <a routerLink="/experience"
+          class="px-7 py-3.5 border border-slate-700/80 bg-slate-900/60 text-slate-300 hover:text-white font-medium rounded-xl hover:border-slate-500 hover:bg-slate-800/80 backdrop-blur-md transition-all duration-300 text-sm sm:text-base flex items-center justify-center gap-2">
+          <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+          </svg>
+          <span>Experience & Education</span>
+        </a>
+      </div>
     </div>
 
-    <!-- CTA Buttons -->
-    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16 sm:mb-20">
-      <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" (click)="trackResumeDownload()"
-        class="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 bg-gradient-to-r from-green-400 to-green-500 text-black font-bold rounded-lg hover:shadow-xl hover:shadow-green-400/40 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 text-sm sm:text-base">
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
-          </path>
-        </svg>
-        <span>Download Resume (PDF)</span>
-      </a>
-
-      <a routerLink="/experience"
-        class="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 border-2 border-green-400 text-green-400 font-bold rounded-lg hover:bg-green-400 hover:text-black hover:shadow-lg hover:shadow-green-400/30 transition-all duration-300 transform hover:scale-105 text-center text-sm sm:text-base flex items-center justify-center gap-2">
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-        </svg>
-        <span>View Experience</span>
-      </a>
-    </div>
-
-    <!-- Info Cards -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-      <!-- Technical Skills Card -->
+    <!-- 3 Core Pillars (Glassmorphic Cards) -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-16 sm:mb-20">
+      <!-- Pillar 1: QA & SDET -->
       <div
-        class="group bg-gradient-to-br from-gray-800 to-gray-900 p-6 sm:p-8 rounded-xl border border-gray-700 hover:border-green-400/50 transition-all duration-300 hover:shadow-xl hover:shadow-green-400/10 transform hover:-translate-y-1">
-        <div class="flex items-start gap-4 mb-4">
+        class="group relative rounded-2xl p-6 sm:p-7 border border-green-400/30 bg-gradient-to-br from-green-950/25 via-slate-900/70 to-slate-900/90 backdrop-blur-xl transition-all duration-300 hover:border-green-400/70 hover:shadow-xl hover:shadow-green-400/10 transform hover:-translate-y-1">
+        <div class="flex items-start justify-between gap-3 mb-4">
           <div
-            class="flex-shrink-0 w-12 h-12 bg-green-400/10 rounded-lg flex items-center justify-center group-hover:bg-green-400/20 transition-colors">
+            class="flex-shrink-0 w-12 h-12 bg-green-400/10 rounded-xl flex items-center justify-center border border-green-400/20 group-hover:bg-green-400/20 group-hover:border-green-400/40 transition-all">
             <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12a9 9 0 11-18 0 9 9 0 0118 0m-9 5h.01M15.89 5.882l-.707-.707M5.882 15.89l-.707.707M5.11 12a6.981 6.981 0 0110.364-6.364">
+                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
               </path>
             </svg>
           </div>
-          <div>
-            <h3 class="text-xl sm:text-2xl font-bold text-green-400">Technical Skills</h3>
-          </div>
+          <span class="text-xs font-mono font-semibold px-2.5 py-1 rounded-full bg-green-400/10 text-green-400 border border-green-400/30">
+            Core Focus • SDET
+          </span>
         </div>
-        <p class="text-gray-300 text-sm sm:text-base leading-relaxed">
-          Angular, .NET, TypeScript, JavaScript, Node.js, and modern web technologies
+
+        <h3 class="text-xl font-bold text-lightest-slate group-hover:text-white transition-colors mb-2">
+          Software Testing & QA
+        </h3>
+        <p class="text-slate-300 text-sm leading-relaxed mb-4">
+          Specialized in automated test pipelines, API validation, Selenium test scripts, manual regression suites, and Agile/JIRA defect lifecycles.
         </p>
+
+        <div class="flex flex-wrap gap-1.5 font-mono text-xs text-green-400/90 pt-3 border-t border-slate-800">
+          <span class="px-2 py-0.5 rounded bg-green-400/5 border border-green-400/20">API Testing</span>
+          <span class="px-2 py-0.5 rounded bg-green-400/5 border border-green-400/20">Selenium</span>
+          <span class="px-2 py-0.5 rounded bg-green-400/5 border border-green-400/20">Automation</span>
+          <span class="px-2 py-0.5 rounded bg-green-400/5 border border-green-400/20">Agile / JIRA</span>
+        </div>
       </div>
 
-      <!-- Experience Card -->
+      <!-- Pillar 2: Core CS & ML -->
       <div
-        class="group bg-gradient-to-br from-gray-800 to-gray-900 p-6 sm:p-8 rounded-xl border border-gray-700 hover:border-green-400/50 transition-all duration-300 hover:shadow-xl hover:shadow-green-400/10 transform hover:-translate-y-1">
-        <div class="flex items-start gap-4 mb-4">
+        class="group relative rounded-2xl p-6 sm:p-7 border border-teal-400/30 bg-gradient-to-br from-teal-950/25 via-slate-900/70 to-slate-900/90 backdrop-blur-xl transition-all duration-300 hover:border-teal-400/70 hover:shadow-xl hover:shadow-teal-400/10 transform hover:-translate-y-1">
+        <div class="flex items-start justify-between gap-3 mb-4">
           <div
-            class="flex-shrink-0 w-12 h-12 bg-green-400/10 rounded-lg flex items-center justify-center group-hover:bg-green-400/20 transition-colors">
-            <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            class="flex-shrink-0 w-12 h-12 bg-teal-400/10 rounded-xl flex items-center justify-center border border-teal-400/20 group-hover:bg-teal-400/20 group-hover:border-teal-400/40 transition-all">
+            <svg class="w-6 h-6 text-teal-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.597-9-1.69M5 21h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2z">
+                d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
               </path>
             </svg>
           </div>
-          <div>
-            <h3 class="text-xl sm:text-2xl font-bold text-green-400">Experience</h3>
-          </div>
+          <span class="text-xs font-mono font-semibold px-2.5 py-1 rounded-full bg-teal-400/10 text-teal-300 border border-teal-400/30">
+            Engineering & ML
+          </span>
         </div>
-        <p class="text-gray-300 text-sm sm:text-base leading-relaxed">
-          Full-Stack development with focus on scalable web applications and API development
+
+        <h3 class="text-xl font-bold text-lightest-slate group-hover:text-white transition-colors mb-2">
+          Engineering & ML
+        </h3>
+        <p class="text-slate-300 text-sm leading-relaxed mb-4">
+          Algorithmic problem-solving foundation in Python, C/C++, SQL, and DSA, paired with ML pipelines (XGBoost, Random Forest, PyTorch, Streamlit).
         </p>
+
+        <div class="flex flex-wrap gap-1.5 font-mono text-xs text-teal-300/90 pt-3 border-t border-slate-800">
+          <span class="px-2 py-0.5 rounded bg-teal-400/5 border border-teal-400/20">Python</span>
+          <span class="px-2 py-0.5 rounded bg-teal-400/5 border border-teal-400/20">C/C++</span>
+          <span class="px-2 py-0.5 rounded bg-teal-400/5 border border-teal-400/20">DSA</span>
+          <span class="px-2 py-0.5 rounded bg-teal-400/5 border border-teal-400/20">XGBoost (~92%)</span>
+        </div>
       </div>
 
-      <!-- Projects Card -->
+      <!-- Pillar 3: Production Projects -->
       <div
-        class="group bg-gradient-to-br from-gray-800 to-gray-900 p-6 sm:p-8 rounded-xl border border-gray-700 hover:border-green-400/50 transition-all duration-300 hover:shadow-xl hover:shadow-green-400/10 transform hover:-translate-y-1 sm:col-span-2 lg:col-span-1">
-        <div class="flex items-start gap-4 mb-4">
+        class="group relative rounded-2xl p-6 sm:p-7 border border-slate-700/60 bg-gradient-to-br from-slate-900/60 via-slate-900/80 to-slate-950/90 backdrop-blur-xl transition-all duration-300 hover:border-green-400/50 hover:shadow-xl hover:shadow-green-400/10 transform hover:-translate-y-1">
+        <div class="flex items-start justify-between gap-3 mb-4">
           <div
-            class="flex-shrink-0 w-12 h-12 bg-green-400/10 rounded-lg flex items-center justify-center group-hover:bg-green-400/20 transition-colors">
+            class="flex-shrink-0 w-12 h-12 bg-green-400/10 rounded-xl flex items-center justify-center border border-green-400/20 group-hover:bg-green-400/20 group-hover:border-green-400/40 transition-all">
             <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10">
+              </path>
             </svg>
           </div>
-          <div>
-            <h3 class="text-xl sm:text-2xl font-bold text-green-400">Projects</h3>
+          <span class="text-xs font-mono font-semibold px-2.5 py-1 rounded-full bg-slate-800 text-slate-300 border border-slate-700">
+            3 Live Deployments
+          </span>
+        </div>
+
+        <h3 class="text-xl font-bold text-lightest-slate group-hover:text-white transition-colors mb-2">
+          Production Projects
+        </h3>
+        <p class="text-slate-300 text-sm leading-relaxed mb-4">
+          3 verified live web applications deployed on Streamlit, Firebase, and Vercel with real-world users and end-to-end architectures.
+        </p>
+
+        <div class="flex flex-wrap gap-1.5 font-mono text-xs text-green-400/90 pt-3 border-t border-slate-800">
+          <span class="px-2 py-0.5 rounded bg-slate-800/80 border border-slate-700">FutureCrop</span>
+          <span class="px-2 py-0.5 rounded bg-slate-800/80 border border-slate-700">LegalSangam</span>
+          <span class="px-2 py-0.5 rounded bg-slate-800/80 border border-slate-700">Tech-360</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Interactive Skills Matrix Section -->
+    <div class="mb-16 sm:mb-20">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-6">
+        <div>
+          <div class="flex items-center gap-3 mb-2">
+            <span class="w-1.5 h-7 rounded-full bg-gradient-to-b from-green-400 to-emerald-500"></span>
+            <h2 class="text-2xl sm:text-3xl font-bold text-lightest-slate">Interactive Skills Matrix</h2>
+          </div>
+          <p class="text-sm text-slate-400">
+            Filter by domain to explore competencies, tools, and technical proficiency.
+          </p>
+        </div>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="flex flex-wrap gap-2 sm:gap-2.5 mb-8 p-1.5 rounded-2xl bg-slate-900/60 border border-slate-800 backdrop-blur-md">
+        @for (cat of categories; track cat.id) {
+        <button
+          (click)="setCategory(cat.id)"
+          type="button"
+          class="px-3.5 sm:px-4 py-2 rounded-xl text-xs sm:text-sm font-mono font-medium transition-all duration-200 cursor-pointer flex items-center gap-2"
+          [ngClass]="selectedCategory === cat.id 
+            ? 'bg-green-400 text-black shadow-lg shadow-green-400/25 font-bold scale-[1.02]' 
+            : 'text-slate-300 hover:text-white hover:bg-slate-800/70'">
+          <span>{{ cat.label }}</span>
+          <span
+            class="text-[10px] px-1.5 py-0.5 rounded-full"
+            [ngClass]="selectedCategory === cat.id ? 'bg-black/20 text-black' : 'bg-slate-800 text-slate-400'">
+            {{ cat.count }}
+          </span>
+        </button>
+        }
+      </div>
+
+      <!-- Filtered Skill Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        @for (group of displayedSkillGroups; track group.id) {
+        <div
+          class="group rounded-2xl p-6 border border-slate-800 bg-gradient-to-br from-slate-900/60 to-slate-950/70 backdrop-blur-xl hover:border-slate-700 hover:shadow-xl hover:shadow-green-400/5 transition-all duration-300">
+          <div class="flex items-center justify-between gap-2 mb-5">
+            <div class="flex items-center gap-3">
+              <span class="w-1.5 h-6 rounded-full bg-gradient-to-b {{ group.accentGradient }}"></span>
+              <h3 class="font-bold text-base sm:text-lg text-white group-hover:text-green-400 transition-colors">
+                {{ group.category }}
+              </h3>
+            </div>
+            @if (group.badge) {
+            <span
+              class="text-xs font-mono px-2.5 py-0.5 rounded-full"
+              [ngClass]="group.isPriority ? 'bg-green-400/10 text-green-400 border border-green-400/30' : 'bg-slate-800 text-slate-300 border border-slate-700'">
+              {{ group.badge }}
+            </span>
+            }
+          </div>
+
+          <div class="flex flex-wrap gap-2 sm:gap-2.5">
+            @for (skill of group.skills; track skill) {
+            <div
+              class="group/item inline-flex items-center gap-2 px-3 py-1.5 rounded-xl border border-slate-700/60 bg-slate-800/40 text-slate-200 hover:border-green-400/60 hover:bg-slate-800/90 hover:text-white hover:scale-[1.02] hover:shadow-md transition-all duration-200 cursor-default">
+              <span class="w-1.5 h-1.5 rounded-full bg-green-400 opacity-70 group-hover/item:opacity-100"></span>
+              <span class="text-xs sm:text-sm font-medium">{{ skill }}</span>
+            </div>
+            }
           </div>
         </div>
-        <p class="text-gray-300 text-sm sm:text-base leading-relaxed">
-          Portfolio of innovative solutions and modern web applications
-        </p>
+        }
+      </div>
+    </div>
+
+    <!-- Featured Projects Showcase (Glassmorphic) -->
+    <div class="mb-16 sm:mb-20">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
+        <div>
+          <div class="flex items-center gap-3 mb-2">
+            <span class="w-1.5 h-7 rounded-full bg-gradient-to-b from-green-400 to-emerald-500"></span>
+            <h2 class="text-2xl sm:text-3xl font-bold text-lightest-slate">Featured Projects & Live Demos</h2>
+          </div>
+          <p class="text-sm text-slate-400">
+            Real-world systems with verifiable production deployments and live interactive demos.
+          </p>
+        </div>
+
+        <a routerLink="/projects" class="text-xs sm:text-sm font-mono text-green-400 hover:underline flex items-center gap-1.5 self-start sm:self-auto">
+          <span>View Detailed Case Studies</span>
+          <span>→</span>
+        </a>
+      </div>
+
+      <div class="space-y-6 sm:space-y-8">
+        @for (project of featuredProjects; track project.id) {
+        <div
+          class="group relative rounded-2xl p-6 sm:p-8 border border-slate-800 bg-gradient-to-br from-slate-900/60 via-slate-900/80 to-slate-950/90 backdrop-blur-xl hover:border-green-400/50 hover:shadow-2xl hover:shadow-green-400/10 transition-all duration-300">
+          
+          <!-- Top Header: Title, Tagline & Live Demo Action -->
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4 pb-4 border-b border-slate-800/80">
+            <div>
+              <div class="flex flex-wrap items-center gap-3 mb-1">
+                <h3 class="text-xl sm:text-2xl font-bold text-white group-hover:text-green-400 transition-colors">
+                  {{ project.name }}
+                </h3>
+                <span class="text-slate-500 hidden sm:inline">•</span>
+                <span class="text-sm sm:text-base font-medium text-green-400/90">{{ project.subtitle }}</span>
+                <span class="text-xs font-mono px-2.5 py-0.5 rounded-full bg-green-400/10 text-green-300 border border-green-400/20">
+                  {{ project.badge }}
+                </span>
+              </div>
+              <p class="text-xs font-mono text-slate-400">{{ project.tagline }}</p>
+            </div>
+
+            <a [href]="project.liveUrl" target="_blank" rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 px-4 py-2 text-xs font-mono font-bold text-black bg-gradient-to-r from-green-400 to-emerald-400 hover:from-green-300 hover:to-emerald-300 rounded-xl shadow-md shadow-green-400/20 hover:shadow-green-400/35 transition-all duration-200 transform hover:scale-105 active:scale-95 w-fit"
+              [attr.aria-label]="'Live Demo for ' + project.name">
+              <span>Live Demo</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </a>
+          </div>
+
+          <!-- Description -->
+          <p class="text-gray-300 text-sm sm:text-base leading-relaxed mb-5">
+            {{ project.description }}
+          </p>
+
+          <!-- Key Metrics Pills -->
+          <div class="flex flex-wrap gap-2 mb-5">
+            @for (metric of project.metrics; track metric) {
+            <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-mono bg-green-400/5 text-green-300 border border-green-400/20">
+              <span class="w-1 h-1 rounded-full bg-green-400"></span>
+              {{ metric }}
+            </span>
+            }
+          </div>
+
+          <!-- Highlights List -->
+          <ul class="space-y-2 mb-6">
+            @for (item of project.highlights; track item) {
+            <li class="flex items-start gap-2.5 text-xs sm:text-sm text-slate-300">
+              <span class="text-green-400 font-bold flex-shrink-0 mt-0.5">›</span>
+              <span>{{ item }}</span>
+            </li>
+            }
+          </ul>
+
+          <!-- Tech Badges -->
+          <div class="flex flex-wrap gap-2 pt-3 border-t border-slate-800/80">
+            @for (tech of project.tech; track tech) {
+            <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-slate-800/70 text-slate-300 border border-slate-700/60">
+              {{ tech }}
+            </span>
+            }
+          </div>
+        </div>
+        }
+      </div>
+    </div>
+
+    <!-- Education & Credentials Timeline -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
+      <!-- Education Timeline -->
+      <div class="p-6 sm:p-8 rounded-2xl border border-slate-800 bg-gradient-to-br from-slate-900/60 to-slate-950/70 backdrop-blur-xl">
+        <div class="flex items-center gap-3 mb-6">
+          <span class="w-1.5 h-6 rounded-full bg-gradient-to-b from-blue-400 to-indigo-500"></span>
+          <h2 class="text-xl font-bold text-white">Education Background</h2>
+        </div>
+
+        <div class="relative pl-6 space-y-8">
+          <!-- Connecting Timeline Track -->
+          <div class="absolute left-2 top-2 bottom-2 w-0.5 bg-gradient-to-b from-green-400 via-teal-500 to-slate-800"></div>
+
+          @for (edu of education; track edu.institution) {
+          <div class="relative group">
+            <!-- Glowing Node -->
+            <div class="absolute -left-[27px] top-1.5 w-3.5 h-3.5 rounded-full bg-green-400 border-2 border-slate-900 shadow-md shadow-green-400/50 group-hover:scale-125 transition-transform"></div>
+
+            <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 mb-1">
+              <h3 class="font-bold text-lightest-slate text-base sm:text-lg group-hover:text-green-400 transition-colors">
+                {{ edu.institution }}
+              </h3>
+              <span class="text-xs font-mono text-green-400 whitespace-nowrap bg-green-400/10 px-2 py-0.5 rounded border border-green-400/20">
+                {{ edu.period }}
+              </span>
+            </div>
+
+            <p class="text-sm font-semibold text-slate-300 mb-1">{{ edu.degree }}</p>
+            <p class="text-xs font-mono text-slate-400 mb-2">{{ edu.location }}</p>
+
+            <ul class="space-y-1">
+              @for (h of edu.highlights; track h) {
+              <li class="text-xs sm:text-sm text-slate-400 flex items-start gap-2">
+                <span class="text-green-400 font-bold">•</span>
+                <span>{{ h }}</span>
+              </li>
+              }
+            </ul>
+          </div>
+          }
+        </div>
+      </div>
+
+      <!-- Certifications & Credentials -->
+      <div class="p-6 sm:p-8 rounded-2xl border border-slate-800 bg-gradient-to-br from-slate-900/60 to-slate-950/70 backdrop-blur-xl">
+        <div class="flex items-center gap-3 mb-6">
+          <span class="w-1.5 h-6 rounded-full bg-gradient-to-b from-amber-400 to-orange-500"></span>
+          <h2 class="text-xl font-bold text-white">Certifications & Credentials</h2>
+        </div>
+
+        <div class="space-y-4">
+          @for (cert of certifications; track cert.title) {
+          <div
+            class="group p-4 rounded-xl border border-slate-800 bg-slate-900/50 backdrop-blur-md hover:border-green-400/40 hover:bg-slate-900/80 transition-all duration-200">
+            <div class="flex items-start justify-between gap-2 mb-1">
+              <div class="flex items-center gap-2.5">
+                <div class="w-8 h-8 rounded-lg bg-green-400/10 flex items-center justify-center flex-shrink-0 text-green-400 border border-green-400/20 group-hover:bg-green-400/20 transition-colors">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="text-sm sm:text-base font-bold text-white group-hover:text-green-400 transition-colors">
+                    {{ cert.title }}
+                  </h4>
+                  <p class="text-xs font-mono text-slate-400">{{ cert.issuer }}</p>
+                </div>
+              </div>
+
+              <span class="text-[11px] font-mono px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700 whitespace-nowrap">
+                {{ cert.badge }}
+              </span>
+            </div>
+          </div>
+          }
+        </div>
       </div>
     </div>
   </div>

@@ -51,7 +51,8 @@
               "src/manifest.json",
               "src/sitemap.xml",
               "src/robots.txt",
-              "src/resume.pdf"
+              "src/resume.pdf",
+              "src/Resume.pdf"
             ],
             "index": "src/index.html",
             "browser": "src/main.ts",

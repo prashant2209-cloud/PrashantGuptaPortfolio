@@ -13,6 +13,20 @@
       <div class="relative grid md:grid-cols-12 gap-6 lg:gap-8 items-stretch">
         <!-- Image Section -->
         <div class="md:col-span-7">
+          @if (project.liveUrl) {
+          <a [href]="project.liveUrl" target="_blank" rel="noopener noreferrer"
+            class="block group/img focus:outline-none focus:ring-2 focus:ring-green-400 rounded-xl overflow-hidden"
+            [attr.aria-label]="'Visit ' + project.title + ' live website'">
+            <div class="relative h-[280px] md:h-[320px] lg:h-[380px] rounded-xl overflow-hidden cursor-pointer">
+              <img [src]="project.image" [alt]="project.title + ' - ' + project.description[0] + ' project screenshot'"
+                loading="lazy"
+                class="w-full h-full object-cover brightness-75 group-hover:brightness-90 group-hover/img:scale-105 transition-all duration-300" />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-40 group-hover:opacity-20 transition-opacity duration-300">
+              </div>
+            </div>
+          </a>
+          } @else {
           <div class="relative h-[280px] md:h-[320px] lg:h-[380px] rounded-xl overflow-hidden">
             <img [src]="project.image" [alt]="project.title + ' - ' + project.description[0] + ' project screenshot'"
               loading="lazy"
@@ -20,8 +34,8 @@
             <div
               class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-40 group-hover:opacity-20 transition-opacity duration-300">
             </div>
-
           </div>
+          }
         </div>
 
         <!-- Content Section -->
@@ -29,7 +43,18 @@
           <div>
             <h3
               class="text-3xl md:text-2xl lg:text-3xl font-bold mb-6 text-white group-hover:text-green-400 transition-colors duration-300">
+              @if (project.liveUrl) {
+              <a [href]="project.liveUrl" target="_blank" rel="noopener noreferrer"
+                class="inline-flex items-center gap-2.5 text-white hover:text-green-400 transition-colors group/title focus:outline-none focus:underline"
+                [attr.aria-label]="'Visit ' + project.title + ' live website'">
+                <span>{{ project.title }}</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-green-400 group-hover/title:translate-x-1 group-hover/title:-translate-y-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
+              } @else {
               {{ project.title }}
+              }
             </h3>
 
             <!-- Description Box -->
@@ -46,12 +71,22 @@
             </div>
           </div>
 
-          <!-- Tech Stack -->
-          <ul class="flex flex-wrap gap-3 text-sm font-mono text-slate">
-            @for (tech of project.techStack; track tech) {
-            <li>{{ tech }}</li>
+          <!-- Tech Stack & Live Link -->
+          <div class="flex flex-wrap items-center justify-between gap-4 mt-2">
+            <ul class="flex flex-wrap gap-3 text-sm font-mono text-slate">
+              @for (tech of project.techStack; track tech) {
+              <li>{{ tech }}</li>
+              }
+            </ul>
+
+            @if (project.liveUrl) {
+            <a [href]="project.liveUrl" target="_blank" rel="noopener noreferrer"
+              class="inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-mono font-semibold text-green-400 bg-green-400/10 hover:bg-green-400/20 border border-green-400/40 hover:border-green-400 rounded-md transition-all duration-200 hover:scale-105"
+              [attr.aria-label]="'Live Demo for ' + project.title">
+              <span>Live Demo ↗</span>
+            </a>
             }
-          </ul>
+          </div>
         </div>
       </div>
     </div>

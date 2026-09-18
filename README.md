@@ -5,7 +5,7 @@ A modern, responsive portfolio website built with **Angular** and **Server-Side 
 ### Steps
 1. Clone the repository:
    ```bash
-   git clone https://github.com/darshn20/portfolio-site.git
+   git clone https://github.com/prashant2209-cloud/PrashantGuptaPortfolio
    ```
 2. Navigate to the project directory:
    ```bash

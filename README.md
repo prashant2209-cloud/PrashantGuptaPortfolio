@@ -7,10 +7,7 @@ A modern, responsive portfolio website built with **Angular** and **Server-Side 
    ```bash
    git clone https://github.com/prashant2209-cloud/PrashantGuptaPortfolio
    ```
-2. Navigate to the project directory:
-   ```bash
-   cd portfolio-site
-   ```
+
 3. Install dependencies:
    ```bash
    npm install

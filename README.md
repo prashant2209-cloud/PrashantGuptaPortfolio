@@ -44,9 +44,3 @@ For questions or feedback, feel free to reach out:
 
 ---
 
-### 📌 Attribution Notice
-
-If you find this portfolio project helpful and wish to use it as a base for your own site, **please give proper credit** by mentioning my name and linking to my website:
-
-
-Feel free to modify the content and design as needed, but a small attribution goes a long way in supporting and appreciating open-source work. 😊

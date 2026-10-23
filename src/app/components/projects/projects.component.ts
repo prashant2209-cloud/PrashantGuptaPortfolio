@@ -38,7 +38,7 @@ export class ProjectsComponent {
       techStack: ['AI', 'Web Development', 'Multi-language'],
       image: 'https://res.cloudinary.com/diayjemwx/image/upload/v1773166047/Legislation_Photos_-_Download_Free_High-Quality_Pictures___Freepik_lbyrlp.jpg',
       aosImage: 'fade-left',
-      liveUrl: 'https://legal-sangam.web.app/'
+      liveUrl: 'https://legalsangamm.web.app/'
     },
     {
       title: 'FutureCrop — AI Crop Recommendation System',

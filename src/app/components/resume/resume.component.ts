@@ -140,7 +140,7 @@ export class ResumeComponent {
         'Developed geolocation-based lawyer discovery across 12+ practice areas with secure payments'
       ],
       tech: ['AI', 'Web Development', 'Multi-language', 'WebRTC', 'Geolocation'],
-      liveUrl: 'https://legal-sangam.web.app/'
+      liveUrl: 'https://legalsangamm.web.app/'
     },
     {
       id: 'tech360',

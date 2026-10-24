@@ -23,6 +23,7 @@ export interface ResumeProject {
   highlights: string[];
   tech: string[];
   liveUrl: string;
+  githubUrl?: string;
 }
 
 export interface ResumeEducation {
@@ -49,154 +50,176 @@ export class ResumeComponent {
   selectedCategory: string = 'all';
 
   categories = [
-    { id: 'all', label: 'All Skills', count: 31 },
-    { id: 'qa-testing', label: 'Testing & QA', count: 5, isPriority: true },
-    { id: 'programming', label: 'Core CS', count: 8, isPriority: true },
-    { id: 'ml', label: 'Machine Learning', count: 10 },
-    { id: 'web', label: 'Web Dev', count: 5 },
-    { id: 'security', label: 'Cybersecurity', count: 5 },
-    { id: 'tools', label: 'Tools & DevOps', count: 5 },
+    { id: 'all', label: 'All Skills', count: 32 },
+    { id: 'languages', label: 'Languages', count: 6, isPriority: true },
+    { id: 'web-apis', label: 'Web & APIs', count: 7, isPriority: true },
+    { id: 'databases', label: 'Databases', count: 2 },
+    { id: 'ml-data', label: 'ML & Data', count: 4 },
+    { id: 'testing-security', label: 'Testing & Security', count: 4, isPriority: true },
+    { id: 'tools', label: 'Developer Tools', count: 6 },
+    { id: 'core-cs', label: 'Core CS', count: 5, isPriority: true },
   ];
 
   skillGroups: ResumeSkillGroup[] = [
     {
-      id: 'qa-testing',
-      category: 'Software Testing & QA',
-      badge: 'Core Focus • SDET',
+      id: 'languages',
+      category: 'Languages',
+      badge: 'Core Programming',
       isPriority: true,
       accentGradient: 'from-green-400 to-emerald-500',
-      skills: ['API Testing', 'Selenium WebDriver', 'Automation Testing', 'Manual Testing', 'Agile / JIRA']
+      skills: ['Python', 'C++', 'C', 'JavaScript', 'TypeScript', 'SQL']
     },
     {
-      id: 'programming',
-      category: 'Programming & Core CS',
-      badge: 'Software Development',
+      id: 'web-apis',
+      category: 'Web / APIs',
+      badge: 'Full Stack & APIs',
       isPriority: true,
-      accentGradient: 'from-teal-400 to-cyan-500',
-      skills: ['C/C++', 'Python', 'JavaScript', 'SQL', 'Data Structures & Algorithms (DSA)', 'Design & Analysis of Algorithms', 'Operating Systems', 'Computer Networks']
+      accentGradient: 'from-blue-400 to-indigo-500',
+      skills: ['React', 'FastAPI', 'Streamlit', 'HTML5', 'CSS3', 'Tailwind CSS', 'REST APIs']
     },
     {
-      id: 'ml',
-      category: 'Machine Learning & Data',
-      badge: 'Data & AI',
+      id: 'databases',
+      category: 'Databases',
+      badge: 'Data Storage',
+      isPriority: false,
+      accentGradient: 'from-cyan-400 to-blue-500',
+      skills: ['Firebase (Auth, Firestore)', 'MySQL']
+    },
+    {
+      id: 'ml-data',
+      category: 'ML / Data',
+      badge: 'Machine Learning',
       isPriority: false,
       accentGradient: 'from-purple-400 to-fuchsia-500',
-      skills: ['Machine Learning', 'XGBoost', 'Random Forest', 'Scikit-learn', 'Pandas', 'NumPy', 'PyTorch', 'Streamlit', 'Jupyter Notebook', 'Google Colab']
+      skills: ['Scikit-learn', 'Pandas', 'NumPy', 'Matplotlib']
     },
     {
-      id: 'web',
-      category: 'Web Development',
-      badge: 'Frontend & UI',
-      isPriority: false,
-      accentGradient: 'from-blue-400 to-indigo-500',
-      skills: ['HTML', 'CSS', 'JavaScript', 'Bootstrap', 'Responsive Design']
-    },
-    {
-      id: 'security',
-      category: 'Cybersecurity & Networking',
-      badge: 'Security',
-      isPriority: false,
-      accentGradient: 'from-rose-400 to-red-500',
-      skills: ['Network Security', 'Wireshark', 'Burp Suite', 'Cisco Packet Tracer', 'Kali Linux']
+      id: 'testing-security',
+      category: 'Testing / Security',
+      badge: 'QA & Security',
+      isPriority: true,
+      accentGradient: 'from-emerald-400 to-teal-500',
+      skills: ['API Testing', 'Input Validation', 'Burp Suite', 'Wireshark']
     },
     {
       id: 'tools',
-      category: 'Tools & DevOps',
-      badge: 'Workflow',
+      category: 'Developer Tools',
+      badge: 'Workflow & Dev',
       isPriority: false,
       accentGradient: 'from-amber-400 to-orange-500',
-      skills: ['Git', 'GitHub', 'VS Code', 'Vercel', 'Hugging Face']
+      skills: ['Git', 'GitHub', 'VS Code', 'Google Colab', 'Jupyter Notebook', 'Vercel']
+    },
+    {
+      id: 'core-cs',
+      category: 'Core CS',
+      badge: 'Computer Science',
+      isPriority: true,
+      accentGradient: 'from-teal-400 to-cyan-500',
+      skills: ['DSA', 'Operating Systems', 'Computer Networks', 'OOPs', 'DBMS']
     }
   ];
 
   featuredProjects: ResumeProject[] = [
     {
-      id: 'futurecrop',
-      name: 'FutureCrop',
-      subtitle: 'AI Crop Recommendation System',
-      tagline: 'Precision Agriculture with Machine Learning',
-      badge: 'Streamlit Live',
-      metrics: ['2,200+ Records', '92% XGBoost', '89% Random Forest', '+15% Weather Accuracy'],
-      description: 'An AI-powered agriculture prediction platform analyzing environmental, soil, and weather data to provide data-driven crop recommendations.',
-      highlights: [
-        'Trained and evaluated Random Forest (~89% accuracy) and tuned XGBoost (~92% accuracy) on 2,200+ records',
-        'Integrated dynamic weather data workflows to boost prediction accuracy by ~15%',
-        'Built and deployed an interactive Streamlit web application with real-time inference'
-      ],
-      tech: ['Machine Learning', 'XGBoost', 'Random Forest', 'Scikit-learn', 'Streamlit', 'Python'],
-      liveUrl: 'https://ai-crop-decommendation.streamlit.app/'
-    },
-    {
       id: 'legalsangam',
       name: 'LegalSangam',
-      subtitle: 'Digital Legal Services Marketplace',
-      tagline: 'AI Legal Assistance & WebRTC Consultations',
-      badge: 'Web App Live',
-      metrics: ['100+ Users', '99% WebRTC Uptime', '12+ Practice Areas', 'AI Chatbot'],
-      description: 'A comprehensive digital marketplace connecting citizens with verified legal professionals for accessible and affordable legal assistance.',
+      subtitle: 'AI Legal Assistance Platform',
+      tagline: 'AI Legal Guidance & Advocate Marketplace',
+      badge: 'Live Demo',
+      metrics: ['Gemini API', 'Jitsi Meet', 'Razorpay', 'Firebase'],
+      description: 'An AI legal assistance platform with verified advocate search, profile management, video consultations, and AI-guided case review.',
       highlights: [
-        'Architected real-time peer-to-peer video consultation using WebRTC with 99% connection success',
-        'Built AI legal chat assistant for immediate preliminary guidance and automated document review',
-        'Developed geolocation-based lawyer discovery across 12+ practice areas with secure payments'
+        'Engineered advocate search with filters for location, specialization, ratings, and fees using React and TypeScript.',
+        'Developed Firebase-authenticated client and advocate dashboards with profile management and consultation booking.',
+        'Integrated Gemini API, Jitsi Meet, Leaflet, and Razorpay for AI guidance, video consultations, location search, and payments.'
       ],
-      tech: ['AI', 'Web Development', 'Multi-language', 'WebRTC', 'Geolocation'],
+      tech: ['React', 'TypeScript', 'Firebase', 'Gemini API', 'Jitsi Meet', 'Razorpay', 'Leaflet'],
       liveUrl: 'https://legalsangamm.web.app/'
     },
     {
-      id: 'tech360',
-      name: 'Tech-360',
-      subtitle: 'Automotive Innovation Platform',
-      tagline: 'Clean Mobility & Intelligent Systems',
-      badge: 'Vercel Live',
-      metrics: ['AI Innovations', 'Autonomous Systems', 'EV Mobility', 'Vercel Deployed'],
-      description: 'An automotive tech intelligence platform exploring AI-driven innovations, electric vehicle architectures, and sustainable transport solutions.',
+      id: 'password-cracking',
+      name: 'Password Cracking Playground',
+      subtitle: 'Cybersecurity Learning Project',
+      tagline: 'Interactive Cryptanalysis & Password Security Platform',
+      badge: 'GitHub',
+      metrics: ['FastAPI & SQLite', 'MD5 & SHA-256', 'bcrypt & Argon2', 'Attack Simulations'],
+      description: 'A hands-on password-security learning platform demonstrating cryptographic hashing algorithms, password strength analysis, and authentication attack simulations.',
       highlights: [
-        'Platform inspired by CarDekho exploring AI-driven innovations in the automotive industry',
-        'In-depth exploration of emerging technologies including electric mobility and autonomous systems',
-        'High-performance responsive web application deployed on Vercel'
+        'Built a password-security learning platform using FastAPI, SQLite, and JavaScript.',
+        'Demonstrated MD5, SHA-1, SHA-256, bcrypt, and Argon2 with password-strength analysis.',
+        'Simulated dictionary, brute-force, hybrid, and mask attacks with rate limiting and experiment tracking.'
       ],
-      tech: ['Python', 'AI/ML', 'Web Development', 'Vercel'],
-      liveUrl: 'https://tech-360-three.vercel.app/'
+      tech: ['Python', 'FastAPI', 'JavaScript', 'bcrypt', 'Argon2', 'SQLite'],
+      liveUrl: 'https://github.com/prashant2209-cloud/Password_cracking',
+      githubUrl: 'https://github.com/prashant2209-cloud/Password_cracking'
+    },
+    {
+      id: 'seedsync',
+      name: 'SeedSync',
+      subtitle: 'Crop Recommendation System',
+      tagline: 'Data-Driven Agricultural Precision with Machine Learning',
+      badge: 'Live Demo',
+      metrics: ['22+ Crops', '7 Parameters', 'Random Forest', 'Top-3 Confidence'],
+      description: 'An AI-powered agricultural recommendation application analyzing 7 soil and weather parameters to recommend optimal crops with confidence ranking.',
+      highlights: [
+        'Built a Streamlit application recommending 22+ crops using 7 soil and weather parameters.',
+        'Integrated Scikit-learn with feature scaling to rank the top 3 crops by confidence score.',
+        'Trained a Random Forest model and visualized crop-specific growing conditions using Matplotlib.'
+      ],
+      tech: ['Python', 'Streamlit', 'Scikit-learn', 'Pandas', 'NumPy', 'Matplotlib', 'Seaborn'],
+      liveUrl: 'https://ai-crop-decommendation.streamlit.app/',
+      githubUrl: 'https://github.com/prashant2209-cloud/AI-Crop-Recommendation-System'
     }
   ];
 
   education: ResumeEducation[] = [
     {
-      institution: 'GL Bajaj Institute of Technology and Management',
-      degree: 'B.Tech in Computer Science & Engineering',
-      period: '2023 – Present',
-      location: 'Greater Noida, U.P.',
+      institution: 'G. L. Bajaj Institute of Technology and Management',
+      degree: 'B.Tech in Computer Science and Engineering – CGPA: 7.5/10',
+      period: '2023 – 2027',
+      location: 'Greater Noida, Uttar Pradesh',
       highlights: [
-        'Specialization in Software Quality Assurance, Automation Testing (SDET), and Core Computer Science',
-        'Active problem solver with solid foundation in Data Structures, Algorithms, and Object-Oriented Design'
+        'B.Tech in Computer Science and Engineering (CGPA: 7.5/10)',
+        'Focus on Software Quality Assurance, Automation Testing, API Testing, and Core CS'
       ]
     },
     {
-      institution: 'Maharishi Vidya Mandir School',
-      degree: 'Senior Secondary Education (CBSE)',
-      period: 'Completed',
-      location: 'Prayagraj, U.P.',
+      institution: 'Maharishi Vidya Mandir (CBSE)',
+      degree: 'Class XII: 75% | Class X: 89%',
+      period: '2020 – 2023',
+      location: 'Prayagraj, Uttar Pradesh',
       highlights: [
-        'Rigorous foundation in Computer Science, Advanced Mathematics, and Physics'
+        'Class XII: 75%',
+        'Class X: 89%'
       ]
     }
   ];
 
   certifications: ResumeCertification[] = [
     {
-      title: 'Cybersecurity Fundamentals & Network Security',
-      issuer: 'Palo Alto Networks',
-      badge: 'Security Credential'
-    },
-    {
-      title: 'Introduction to Cybersecurity & Python Essentials',
+      title: 'Python Essentials 1',
       issuer: 'Cisco Networking Academy',
-      badge: 'Networking Credential'
+      badge: 'Programming'
     },
     {
-      title: 'Cybersecurity Virtual Internship Program',
-      issuer: 'EduSkills / AICTE',
-      badge: 'Internship Completed'
+      title: 'CCNA: Introduction to Networks',
+      issuer: 'Cisco Networking Academy',
+      badge: 'Networking'
+    },
+    {
+      title: 'SQL',
+      issuer: 'NxtWave',
+      badge: 'Database'
+    },
+    {
+      title: 'JavaScript',
+      issuer: 'NxtWave',
+      badge: 'Web Development'
+    },
+    {
+      title: 'Introduction to Cybersecurity – Virtual Internship',
+      issuer: 'EduSkills',
+      badge: 'Internship'
     }
   ];
 

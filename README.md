@@ -38,7 +38,7 @@ npm run serve:ssr
 ## 📧 Contact
 
 For questions or feedback, feel free to reach out:
-- **Email**: [prashpaa@gmail.com](mailto:prashpaa@gmail.com)
+- **Email**: [prashantgupta0422@gmail.com](mailto:prashantgupta0422@gmail.com)
 - **LinkedIn**: [prashant-gupta](https://www.linkedin.com/in/prashant-gupta-0839302b1/)
 - **GitHub**: [prashant2209](https://github.com/prashant2209-cloud)
 

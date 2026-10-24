@@ -8,6 +8,7 @@ export interface Project {
   image: string;
   aosImage: string;
   liveUrl?: string;
+  githubUrl?: string;
 }
 
 @Component({
@@ -41,21 +42,25 @@ export class ProjectsComponent {
       liveUrl: 'https://legalsangamm.web.app/'
     },
     {
-      title: 'FutureCrop — AI Crop Recommendation System',
+      title: 'SeedSync – Crop Recommendation System',
       description: [
-        'An AI-powered agriculture prediction system that uses machine learning and weather data to recommend suitable crops based on farming and environmental conditions.',
-        'Trained and evaluated Random Forest (~89% accuracy) and tuned XGBoost (~92% accuracy) models on 2,200+ agricultural records.',
-        'Integrated dynamic weather data workflows to improve prediction accuracy by ~15%, deployed with an interactive Streamlit web application.'
+        'Built a Streamlit application recommending 22+ crops using 7 soil and weather parameters.',
+        'Integrated Scikit-learn with feature scaling to rank the top 3 crops by confidence score.',
+        'Trained a Random Forest model and visualized crop-specific growing conditions using Matplotlib.'
       ],
       techStack: [
-        'Machine Learning',
-        'Random Forest',
+        'Python',
+        'Streamlit',
         'Scikit-learn',
-        'Streamlit'
+        'Pandas',
+        'NumPy',
+        'Matplotlib',
+        'Seaborn'
       ],
       image: '/assets/futurecrop.jpg',
       aosImage: 'fade-right',
-      liveUrl: 'https://ai-crop-decommendation.streamlit.app/'
+      liveUrl: 'https://ai-crop-decommendation.streamlit.app/',
+      githubUrl: 'https://github.com/prashant2209-cloud/AI-Crop-Recommendation-System'
     }
   ];
 }
